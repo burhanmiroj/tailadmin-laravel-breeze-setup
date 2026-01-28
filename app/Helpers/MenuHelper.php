@@ -10,9 +10,7 @@ class MenuHelper
             [
                 'icon' => 'dashboard',
                 'name' => 'Dashboard',
-                'subItems' => [
-                    ['name' => 'Ecommerce', 'path' => '/'],
-                ],
+                'path' => '/dashboard'
             ],
             [
                 'icon' => 'calendar',
@@ -76,8 +74,8 @@ class MenuHelper
                 'icon' => 'authentication',
                 'name' => 'Authentication',
                 'subItems' => [
-                    ['name' => 'Sign In', 'path' => '/signin', 'pro' => false],
-                    ['name' => 'Sign Up', 'path' => '/signup', 'pro' => false],
+                    ['name' => 'Sign In', 'path' => '/login-example', 'pro' => false],
+                    ['name' => 'Sign Up', 'path' => '/register-example', 'pro' => false],
                 ],
             ],
         ];

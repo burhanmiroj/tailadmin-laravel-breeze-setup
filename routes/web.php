@@ -1,10 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 
-// dashboard pages
-Route::get('/', function () {
+// HOME
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// DASHBOARD
+Route::get('/dashboard', function () {
     return view('pages.dashboard.ecommerce', ['title' => 'E-commerce Dashboard']);
 })->name('dashboard');
 
@@ -50,13 +53,13 @@ Route::get('/bar-chart', function () {
 
 
 // authentication pages
-Route::get('/signin', function () {
-    return view('pages.auth.signin', ['title' => 'Sign In']);
-})->name('signin');
+Route::get('/login-example', function () {
+    return view('auth.login', ['title' => 'Sign In']);
+})->name('login.no-action');
 
-Route::get('/signup', function () {
-    return view('pages.auth.signup', ['title' => 'Sign Up']);
-})->name('signup');
+Route::get('/register-example', function () {
+    return view('auth.register', ['title' => 'Sign Up']);
+})->name('register.no-action');
 
 // ui elements pages
 Route::get('/alerts', function () {
@@ -83,4 +86,4 @@ Route::get('/videos', function () {
     return view('pages.ui-elements.videos', ['title' => 'Videos']);
 })->name('videos');
 
-require __DIR__ .'/auth.php';
+require __DIR__ . '/auth.php';
