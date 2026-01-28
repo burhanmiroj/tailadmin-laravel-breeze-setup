@@ -2,7 +2,7 @@
 
 @section('content')
     <x-common.page-breadcrumb pageTitle="Line chart" />
-    <div class="space-y-6">
+    <div class="w-full space-y-6">
         <x-common.component-card title="Line chart 1">
             <!-- ====== Line Chart One Start -->
             <div class="custom-scrollbar max-w-full overflow-x-auto">

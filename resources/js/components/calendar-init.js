@@ -99,7 +99,7 @@ export function calendarInit() {
       if (getModalTitleEl) getModalTitleEl.value = "";
       if (getModalStartDateEl) getModalStartDateEl.value = "";
       if (getModalEndDateEl) getModalEndDateEl.value = "";
-      
+
       const getModalIfCheckedRadioBtnEl = document.querySelector(
         'input[name="event-level"]:checked'
       );
@@ -265,7 +265,7 @@ export function calendarInit() {
     //       getEvent.setDates(setModalStartDateValue, setModalEndDateValue);
     //       getEvent.setExtendedProp("calendar", getModalUpdatedCheckedRadioBtnValue);
     //     }
-        
+
     //     closeModal();
     //   });
     // }
@@ -288,7 +288,7 @@ export function calendarInit() {
         if (getEvent) {
           // Remove the old event
           getEvent.remove();
-          
+
           // Add updated event with all properties
           calendar.addEvent({
             id: getPublicID,
@@ -299,7 +299,7 @@ export function calendarInit() {
             extendedProps: { calendar: getModalUpdatedCheckedRadioBtnValue },
           });
         }
-        
+
         closeModal();
       });
     }
@@ -326,7 +326,7 @@ export function calendarInit() {
           allDay: true,
           extendedProps: { calendar: getModalCheckedRadioBtnValue },
         });
-        
+
         closeModal();
       });
     }
